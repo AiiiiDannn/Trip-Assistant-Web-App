@@ -5,8 +5,7 @@ const options = {
     }
 };
 
-// Replace 'YOUR_API_KEY' with your actual API key
-const apiKey = 'M5RsHE1wTXYgDqS9E6Y3yziFTOn0NjqE';
+const apiKey = 'M5RsHE1wTXYgDqS9E6Y3yziFTOn0NjqE';  // my API key for Tomorrow.io
 const latitude = 42.3478;
 const longitude = -71.0466;
 // const url = `https://api.tomorrow.io/v4/weather/realtime?location=${latitude},${longitude}&apikey=${apiKey}`;
@@ -31,5 +30,8 @@ fetch(url, options)
         console.log('--------------------------');
     })
     .catch(error => console.error("Error fetching weather data:", error));
+
+
+// Code are fetched from Tomorrow.io API documentation, link: https://www.weatherbit.io/api/historical-weather-hourly
 
 
