@@ -32,6 +32,5 @@ fetch(url, options)
     .catch(error => console.error("Error fetching weather data:", error));
 
 
-// Code are fetched from Tomorrow.io API documentation, link: https://www.weatherbit.io/api/historical-weather-hourly
-
-
+// Code are fetched and modified from Tomorrow.io API documentation, link: https://www.weatherbit.io/api/historical-weather-hourly
+// When future change to Tomorrow.io API, go to https://www.weatherbit.io/account/dashboard
