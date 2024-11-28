@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Assistant</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Top Bar -->
+    <header class="top-bar">
+      <div class="top-bar-left">
+        <img src="./assets/trip-icon.svg" alt="User Icon" class="icon" />
+        <h1>Travel Assistant</h1>
+      </div>
+      <div class="top-bar-right">
+        <img src="./assets/bell-icon.svg" alt="Notifications" class="icon" />
+        <button class="sign-btn">Sign Up/Sign In</button>
+      </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container">
+      <!-- Left Column -->
+      <aside class="left-column">
+        <!-- Filter Section -->
+        <div class="filter">
+          <input type="checkbox" id="filter-toggle" class="toggle" />
+          <label for="filter-toggle" class="collapsible-header">
+            <span class="arrow">▼</span> Filter
+          </label>
+          <div class="collapsible-content">
+            <label><input type="checkbox" /> Dining</label>
+            <label><input type="checkbox" /> Shopping</label>
+            <label><input type="checkbox" /> Transportation</label>
+          </div>
+        </div>
+
+        <!-- Explore Section -->
+        <div class="explore">
+          <input type="checkbox" id="explore-toggle" class="toggle" />
+          <label for="explore-toggle" class="collapsible-header">
+            <span class="arrow">▼</span> Explore
+          </label>
+          <div class="collapsible-content">
+            <p>All</p>
+            <p>Current</p>
+            <p>Future</p>
+            <p>Past</p>
+          </div>
+        </div>
+
+        <!-- My Trips Section -->
+        <div class="my-trips">
+          <input type="checkbox" id="my-trips-toggle" class="toggle" />
+          <label for="my-trips-toggle" class="collapsible-header">
+            <span class="arrow">▼</span> My Trips
+          </label>
+          <div class="collapsible-content">
+            <p>Trip to Paris</p>
+            <p>My Beloved Paris Trip</p>
+            <p>Spring Break Adventure</p>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main Section -->
+      <main class="itinerary-section">
+        <!-- Image Section with Overlaid Text -->
+        <div class="trip-header">
+          <img
+            src="./assets/trip-image.jpg"
+            alt="Paris Trip"
+            class="header-image"
+          />
+          <div class="trip-info-text">
+            <h2>Trip to Paris</h2>
+            <p>📅 12/25 - 1/2</p>
+          </div>
+        </div>
+
+        <!-- Itinerary Section -->
+        <h2>December 25, 2024</h2>
+
+        <div
+          class="itinerary-card"
+          data-title="Trip to Paris"
+          data-time="09:00 AM - 10:00 PM"
+          data-weather="Clear, 15°C"
+          data-notes="Sightseeing and leisure activities."
+        >
+          <div class="card-icon">📍</div>
+          <div class="card-content">
+            <h3>Trip to Paris</h3>
+            <p>09:00 AM - 10:00 PM</p>
+            <p>Weather: Clear, 15°C</p>
+          </div>
+          <div class="card-actions">
+            <button class="edit-btn">Edit</button>
+            <button class="delete-btn">Delete</button>
+          </div>
+        </div>
+
+        <div
+          class="itinerary-card"
+          data-title="Dinner Reservation"
+          data-time="07:00 PM - 08:30 PM"
+          data-weather="Clear, 12°C"
+          data-notes="Dinner at Le Meurice."
+        >
+          <div class="card-icon">🍽️</div>
+          <div class="card-content">
+            <h3>Dinner Reservation</h3>
+            <p>07:00 PM - 08:30 PM</p>
+            <p>Weather: Clear, 12°C</p>
+          </div>
+          <div class="card-actions">
+            <button class="edit-btn">Edit</button>
+            <button class="delete-btn">Delete</button>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal hidden">
+      <div class="modal-content">
+        <button class="close-modal">&times;</button>
+        <h3 id="modal-title">Event Title</h3>
+        <p id="modal-time">Time:</p>
+        <p id="modal-weather">Weather:</p>
+        <p id="modal-notes">Notes:</p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

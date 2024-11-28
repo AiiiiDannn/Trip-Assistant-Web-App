@@ -26,7 +26,7 @@ fetch(url, options)
         console.log(`Temperature: ${weatherData.temperature}°C`);
         console.log(`Humidity: ${weatherData.humidity}%`);
         console.log(`Visibility: ${weatherData.visibility} km`);
-        console.log(`Wind Speed: ${weatherData.windpeed} m/s`);
+        console.log(`Wind Speed: ${weatherData.windSpeed} m/s`);
         console.log('--------------------------');
     })
     .catch(error => console.error("Error fetching weather data:", error));
