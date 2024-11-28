@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   
 
-// JavaScript to handle modal
+// Handle modal
 document.querySelectorAll(".itinerary-card").forEach((card) => {
     card.addEventListener("click", () => {
       // Fetch data from card
