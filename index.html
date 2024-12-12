@@ -14,8 +14,36 @@
         <h1>Travel Assistant</h1>
       </div>
       <div class="top-bar-right">
-        <img src="./assets/bell-icon.svg" alt="Notifications" class="icon" />
+        <img
+          src="./assets/bell-icon.svg"
+          alt="Notifications"
+          class="icon-bell icon"
+        />
         <button class="sign-btn">Sign Up/Sign In</button>
+      </div>
+
+      <!-- Notification Modal -->
+      <div id="notification-modal" class="modal hidden">
+        <div class="modal-content">
+          <button id="close-notification-modal" class="close-modal">
+            &times;
+          </button>
+          <h3>Feature Unavailable</h3>
+          <p>
+            This feature is not yet developed. Please stay tuned for updates!
+          </p>
+        </div>
+      </div>
+
+      <!-- Signup/Signin Modal -->
+      <div id="signup-modal" class="modal hidden">
+        <div class="modal-content">
+          <button id="close-signup-modal" class="close-modal">&times;</button>
+          <h3>Feature Unavailable</h3>
+          <p>
+            This feature is not yet developed. Please stay tuned for updates!
+          </p>
+        </div>
       </div>
     </header>
 
@@ -30,9 +58,33 @@
             <span class="arrow">▼</span> Filter
           </label>
           <div class="collapsible-content">
-            <label><input type="checkbox" /> Dining</label>
-            <label><input type="checkbox" /> Shopping</label>
-            <label><input type="checkbox" /> Attractions</label>
+            <label
+              ><input
+                type="checkbox"
+                class="filter-checkbox"
+                data-category="Dining"
+                checked
+              />
+              Dining</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                class="filter-checkbox"
+                data-category="Shopping"
+                checked
+              />
+              Shopping</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                class="filter-checkbox"
+                data-category="Attractions"
+                checked
+              />
+              Attractions</label
+            >
           </div>
         </div>
 
@@ -57,9 +109,7 @@
             <span class="arrow">▼</span> My Trips
           </label>
           <div class="collapsible-content">
-            <p>Trip to Paris</p>
-            <p>My Beloved Paris Trip</p>
-            <p>Spring Break Adventure</p>
+            <p id="trip-to-paris" class="trip-item active">Trip to Paris</p>
           </div>
         </div>
       </aside>
@@ -79,7 +129,7 @@
           </div>
         </div>
 
-        <!-- Itinerary Section -->
+        <!-- Itinerary Section
         <h2>December 25, 2024</h2>
 
         <div
@@ -118,7 +168,7 @@
             <button class="edit-btn">Edit</button>
             <button class="delete-btn">Delete</button>
           </div>
-        </div>
+        </div> -->
       </main>
     </div>
     <!-- Container End -->
@@ -129,8 +179,10 @@
         <button id="close-main-modal" class="close-modal">&times;</button>
         <h3 id="modal-title">Event Title</h3>
         <p id="modal-time">Time:</p>
-        <p id="modal-weather">Weather:</p>
+        <p id="modal-category">Category:</p>
+        <p id="modal-location">Location:</p>
         <p id="modal-notes">Notes:</p>
+        <p id="modal-weather">Weather:</p>
       </div>
     </div>
 
@@ -143,6 +195,15 @@
         <button id="close-add-trip-modal" class="close-modal">&times;</button>
         <h3>Add New Trip</h3>
         <form id="add-trip-form">
+          <label for="trip-name">Trip Name:</label>
+          <input
+            type="text"
+            id="trip-name"
+            name="trip-name"
+            placeholder="Enter trip name"
+            required
+          />
+
           <label for="trip-category">Category:</label>
           <select id="trip-category" name="trip-category" required>
             <option value="" disabled selected>Select a category</option>
