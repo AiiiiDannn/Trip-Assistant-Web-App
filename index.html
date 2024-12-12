@@ -32,7 +32,7 @@
           <div class="collapsible-content">
             <label><input type="checkbox" /> Dining</label>
             <label><input type="checkbox" /> Shopping</label>
-            <label><input type="checkbox" /> Transportation</label>
+            <label><input type="checkbox" /> Attractions</label>
           </div>
         </div>
 
@@ -123,14 +123,66 @@
     </div>
     <!-- Container End -->
 
-    <!-- Modal -->
+    <!-- Main Modal -->
     <div id="modal" class="modal hidden">
       <div class="modal-content">
-        <button class="close-modal">&times;</button>
+        <button id="close-main-modal" class="close-modal">&times;</button>
         <h3 id="modal-title">Event Title</h3>
         <p id="modal-time">Time:</p>
         <p id="modal-weather">Weather:</p>
         <p id="modal-notes">Notes:</p>
+      </div>
+    </div>
+
+    <!-- Add Button -->
+    <button id="add-trip-btn" class="add-trip-btn">+</button>
+
+    <!-- Add Trip Modal -->
+    <div id="add-trip-modal" class="modal hidden">
+      <div class="modal-content">
+        <button id="close-add-trip-modal" class="close-modal">&times;</button>
+        <h3>Add New Trip</h3>
+        <form id="add-trip-form">
+          <label for="trip-category">Category:</label>
+          <select id="trip-category" name="trip-category" required>
+            <option value="" disabled selected>Select a category</option>
+            <option value="Dining">Dining</option>
+            <option value="Shopping">Shopping</option>
+            <option value="Attractions">Attractions</option>
+          </select>
+
+          <label for="trip-date">Date:</label>
+          <input type="date" id="trip-date" name="trip-date" required />
+
+          <label for="trip-start-time">Start Time:</label>
+          <input
+            type="time"
+            id="trip-start-time"
+            name="trip-start-time"
+            required
+          />
+
+          <label for="trip-end-time">End Time:</label>
+          <input type="time" id="trip-end-time" name="trip-end-time" required />
+
+          <label for="trip-location">Location:</label>
+          <input
+            type="text"
+            id="trip-location"
+            name="trip-location"
+            placeholder="Enter location"
+            required
+          />
+
+          <label for="trip-notes">Notes:</label>
+          <textarea
+            id="trip-notes"
+            name="trip-notes"
+            placeholder="Enter notes"
+          ></textarea>
+
+          <button type="submit" class="save-trip-btn">Save Trip</button>
+        </form>
       </div>
     </div>
 
